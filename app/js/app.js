@@ -7,7 +7,7 @@ window.$ = $
 // import 'module_name'
 import 'smooth-scroll'
 import 'inputmask'
-//import Swiper, { Navigation, Pagination } from 'swiper'
+import Swiper, { Navigation, Pagination } from 'swiper'
 import Swiper from 'swiper/bundle'
 import noUiSlider from 'nouislider'
 import wNumb from 'wnumb'
@@ -51,10 +51,10 @@ function sliders() {
 		//preloadImages: false,
 		//lazy: true,
 		// Dots
-		//pagination: {
-		//	el: '.slider-quality__pagging',
-		//	clickable: true,
-		//},
+		pagination: {
+			el: '.slider-quality__pagging',
+			clickable: true,
+		},
 		// Arrows
 		navigation: {
 			prevEl: '.swiper-button-prev',
@@ -106,6 +106,53 @@ function stickyHeader(src_value) {
 	}
 }
 
+function map(n) {
+	ymaps.ready(init);
+	function init() {
+		// Создание карты.
+		var myMap = new ymaps.Map("map", {
+			// Координаты центра карты.
+			// Порядок по умолчанию: «широта, долгота».
+			// Чтобы не определять координаты центра карты вручную,
+			// воспользуйтесь инструментом Определение координат.
+			controls: [],
+			center: [43.585525, 39.723062],
+			// Уровень масштабирования. Допустимые значения:
+			// от 0 (весь мир) до 19.
+			zoom: 10
+		});
+
+		let myPlacemark = new ymaps.Placemark([43.585525, 39.723062], {
+		},{
+			// Опции.
+			//balloonContentHeader: 'Mistoun',
+			//balloonContentBody: 'Москва, Николоямская 40с1',
+			//balloonContentFooter: '+ 7(495) 507-54 - 90',
+			//hasBalloon: true,
+			//hideIconOnBalloonOpen: true,
+
+			hasBalloon: false,
+			hideIconOnBalloonOpen: false,
+			// Необходимо указать данный тип макета.
+			iconLayout: 'default#imageWithContent',
+			// Своё изображение иконки метки.
+			iconImageHref: 'images/dist/icons/map.svg',
+			// Размеры метки.
+			iconImageSize: [40, 40],
+			// Смещение левого верхнего угла иконки относительно
+			// её "ножки" (точки привязки).
+			iconImageOffset: [-20, -20],
+			// Смещение слоя с содержимым относительно слоя с картинкой.
+			iconContentOffset: [0, 0],
+		});
+		myMap.geoObjects.add(myPlacemark);
+
+		myMap.behaviors.disable('scrollZoom');
+		myMap.behaviors.disable('drag');
+	}
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
 	files();
@@ -115,7 +162,8 @@ document.addEventListener('DOMContentLoaded', () => {
 	onClickActions();
 
 	stickyHeader();
-
+ 
+	map();
 })
 
 $(window).on('scroll', function () {
@@ -124,6 +172,9 @@ $(window).on('scroll', function () {
 
 // Сюда вставлять большие скрипты
 function files() {
+
+	
+
 	//=================
 	//Menu
 	let iconMenu = document.querySelector(".icon-menu");

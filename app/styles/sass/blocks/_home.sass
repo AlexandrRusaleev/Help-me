@@ -53,7 +53,7 @@
       margin-bottom: 12px
 
    &__content
-      background: url(../images/dist/dizayn_interera.png) no-repeat
+      background: url(../images/dist/dizayn_interera.png) 0 0 / cover no-repeat
       text-align: center
 
    &__contentt
@@ -83,16 +83,8 @@
       margin-bottom: 22px
 
    &__txt
-      position: relative
-      top: 475px
-      left: 430px
-      display: inline-block
-      font-size: 90px
-      font-weight: 900
-      line-height: 105,47px
-      background: linear-gradient(60deg, rgba(85, 80, 80, 0.205), rgba(222, 211, 109, 0))
-      -webkit-background-clip: text
-      -webkit-text-fill-color: transparent
+      top: 620px
+      right: 30px
 
    &__btn
       font-weight: 400
@@ -121,8 +113,10 @@
 
       &__container
          margin-top: 90px
+         margin-bottom: 90px
 
       &__content
+         position: relative
          display: flex
          flex-direction: column
          align-items: center
@@ -132,29 +126,38 @@
          text-align: center
          font-size: 40px
          font-weight: 700
-
          margin-bottom: 20px
 
       &__grid
+         position: relative
+         z-index: 2
          width: 100%
-         display: grid
-         grid-template: repeat(4, 455px)/repeat(3, 370px)
+         display: flex
+         flex-wrap: wrap
+         justify-content: space-between
          border-top: 1px solid rgba(225, 222, 206, 1)
          padding: 34px 0px 0px 0px
-         column-gap: 15px
-         row-gap: 28px
-         margin: 0px 0px 35px
+         margin: 0px 0px 45px 0px
 
       &__item
+         margin-bottom: 38px
 
       &__btn
          display: flex
          justify-content: space-between
          max-width: 515px
          width: 100%
-         
+
+      &__txxt1
+         left: -210px
+         top: 700px
+
+      &__txxt2
+         right: -343px
+         bottom: 200px
 
 .pbtn
+   font-family: ebgaramond
    padding: 17px 0px 0px 0px
    width: 220px
    height: 62px
@@ -166,7 +169,7 @@
    border: 1px solid rgba(225, 222, 206, 1)
    &:hover
       background-color: rgba(225, 222, 206, 1)
-      color:#191919
+      color: #191919
       text-decoration: none
    &:active
       box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
@@ -178,14 +181,14 @@
          font-family: ebgaramond
 
       &__image
+         width: 370px
+         height: 384px
+         margin-bottom: 17px
          img
             width: 100%
             height: 100%
             object-fit: cover
             border-radius: 5px
-         width: 370px
-         height: 384px
-         margin-bottom: 17px
 
       &__title
          font-weight: 700
@@ -195,3 +198,514 @@
       &__subtitle
          font-weight: 400
          font-size: 14px
+
+//solutions=================================================================================================================
+
+.solutions
+
+      &__container
+
+      &__content
+         position: relative
+         display: flex
+         flex-direction: column
+         align-items: center
+
+      &__title
+         color: #fff
+         max-width: 590px
+         text-align: center
+         font-size: 40px
+         line-height: 46px
+         font-weight: 400
+         font-family: ebgaramond
+         margin-bottom: 20px
+         span
+            color: #E1DECE
+
+      &__row
+         width: 100%
+         display: flex
+         justify-content: space-between
+         border-top: 1px solid #E1DECE
+         padding: 34px 0px 0px 0px
+
+      &__photo
+         position: relative
+         display: flex
+         width: 100%
+         max-width: 538px
+         justify-content: space-between
+
+      &__contentt
+         max-width: 590px
+
+      &__text
+         font-size: 16px
+         font-weight: 400
+         line-height: 26px
+         p
+            margin-bottom: 30px
+
+      &__achievements
+         margin-top: 40px
+         height: 53px
+         display: flex
+         justify-content: space-between
+
+      &__bolee
+         padding: 0 3px 0 0
+         font-size: 12px
+         font-weight: 400
+         text-transform: uppercase
+         margin: 0 -30px 0 0
+         transform: rotate(-90deg)
+
+      &__cifra
+         font-size: 45px
+         font-weight: 500
+         line-height: 52px
+
+      &__txt
+         font-size: 12px
+         font-weight: 400
+         line-height: 14px
+         margin: 0px 0px 0px 4px
+         padding-top: 12px
+         text-transform: uppercase
+
+      &__we
+         margin: 30px 0 0 0
+         text-align: center
+         font-size: 16px
+         font-family: segoe-script
+
+      &__btn
+         display: flex
+         justify-content: space-between
+         max-width: 515px
+         width: 100%
+         margin-top: 80px
+
+      &__txxt
+         bottom: 20px
+         left: -200px
+
+.photo
+
+   &__item
+      img
+         width: 100%
+         height: 100%
+         object-fit: cover
+      width: 259px
+      height: 608px
+
+.achi
+
+   &__item
+      display: flex
+
+.block1
+   width: 261px
+   height: 20px
+   background-color: #191919
+   position: absolute
+   top: 408px
+   left: -1px
+
+.block2
+   position: absolute
+   width: 261px
+   height: 20px
+   background-color: #191919
+   top: 240px
+   right: 0px
+
+//perfection===================================================================================================================
+
+.perfection
+
+      &__container
+         transform: skew(0deg,15deg)
+         margin: -200px 0 0 0
+
+      &__content
+
+      &__row
+         display: flex
+         justify-content: space-between
+
+      &__image
+         margin: 0 -500px 0 0
+
+      &__text
+         color: #191919
+         margin: 230px 5% 0 0
+
+      &__title
+         max-width: 500px
+         font-family: ebgaramond
+         font-size: 40px
+         font-weight: 400
+         line-height: 60px
+         margin: 0 0 360px 0
+         span
+            text-transform: uppercase
+            font-weight: 700
+
+      &__txt
+         max-width: 500px
+         color: #404040
+         font-size: 16px
+         line-height: 26px
+         font-weight: 400
+         span
+            font-size: 24px
+
+      &__row2
+         display: flex
+         justify-content: space-between
+         margin-top: 30px
+
+      &__column
+         width: 270px
+         background-color: #191919
+         border-radius: 20px
+
+      &__item
+         text-align: center
+
+.perfection
+   background: url('../images/dist/interer-komnata-kvartira-4059 1.png') 0 0/cover no-repeat
+   height: 2000px
+   transform: skew(0deg,-15deg)
+   margin: 200px 0 0 0
+
+.per-item
+
+      &__img
+         img
+            width: 80px
+            height: 80px
+            object-fit: cover
+         display: flex
+         justify-content: center
+         align-items: center
+         border: 3px solid #E1DECE
+         border-radius: 50%
+         margin: 35px auto
+         width: 137px
+         height: 137px
+
+      &__title
+         color: #fff
+         text-transform: uppercase
+         font-weight: 400
+         font-size: 18px
+         line-height: 28px
+         margin: 0 20px 20px 20px
+
+      &__txt
+         color: #CDCDCB
+         font-weight: 400
+         font-size: 14px
+         line-height: 24px
+         margin: 0 23px 30px 23px
+
+//colection===============================================================================================================
+
+.colection
+
+      &__container
+         margin-top: -20px
+
+      &__content
+         position: relative
+
+      &__item-left
+
+      &__item
+         margin-bottom: 250px
+
+      &__bckgrnd
+         position: absolute
+         &:nth-child(1)
+            top: 585px
+            right: -500px
+         &:nth-child(2)
+            transform: rotate(-90deg)
+            top: 50%
+            left: -500px
+         &:nth-child(3)
+            bottom: 330px
+            right: -400px
+            transform: rotate(-60deg)
+
+.colection
+   position: relative
+   z-index: 2
+   margin-top: 142px
+
+.item-left
+
+      &__row
+         display: flex
+         justify-content: space-between
+
+      &__images
+         position: relative
+
+      &__imgb
+         img
+            border-radius: 5px
+
+      &__imgs
+         img
+            border-radius: 5px
+         position: absolute
+         right: -110px
+         top: 256px
+
+      &__text
+         max-width: 420px
+         margin: 155px 30px 0 0
+
+      &__col
+         font-weight: 400
+         font-size: 10px
+         line-height: 26px
+         text-transform: uppercase
+         color: #6E6E6E
+         margin-bottom: 18px
+
+      &__title
+         font-family: ebgaramond
+         font-weight: 700
+         font-size: 40px
+         line-height: 46px
+         margin-bottom: 30px
+
+      &__txt
+         font-weight: 400
+         font-size: 16px
+         line-height: 26px
+         color: #C4C4C4
+
+.item-right
+
+      &__row
+         display: flex
+         flex-direction: row-reverse
+         justify-content: space-between
+
+      &__images
+         position: relative
+
+      &__imgb
+         img
+            border-radius: 5px
+
+      &__imgs
+         img
+            border-radius: 5px
+            position: absolute
+            left: -110px
+            top: 256px
+
+      &__text
+         max-width: 420px
+         margin: 155px 30px 0 0
+
+      &__col
+         font-weight: 400
+         font-size: 10px
+         line-height: 26px
+         text-transform: uppercase
+         color: #6E6E6E
+         margin-bottom: 18px
+
+      &__title
+         font-family: ebgaramond
+         font-weight: 700
+         font-size: 40px
+         line-height: 46px
+         margin-bottom: 30px
+
+      &__txt
+         font-weight: 400
+         font-size: 16px
+         line-height: 26px
+         color: #C4C4C4
+
+//================================================================================================================
+
+.useful
+
+      &__container
+         color: #191919
+         padding: 400px 0 0 0
+
+      &__content
+         background: url('../images/dist/interer-komnata-kvartira-4059 12.png') 0 0/cover no-repeat
+         transform: skew(0deg,15deg)
+         margin: -210px 0 0 0
+         height: 1900px
+
+      &__title
+         font-family: ebgaramond
+         font-weight: 400
+         font-size: 40px
+         line-height: 60px
+         padding: 0 0 0 50%
+         span
+            text-transform: uppercase
+            font-weight: 700
+
+      &__row
+         margin: 150px 0 30px 0
+         display: flex
+         justify-content: space-between
+
+      &__column
+         max-width: 370px
+         width: 100%
+
+      &__subtitle
+         font-family: ebgaramond
+         font-weight: 700
+         font-size: 24px
+         line-height: 36px
+         margin-bottom: 30px
+
+      &__txt
+         font-weight: 400
+         font-size: 14px
+         line-height: 24px
+         span
+            font-weight: 700
+         p
+            margin: 0 0 30px 0
+
+.useful
+   position: relative
+   z-index: 0
+   overflow: hidden
+   transform: skew(0deg,-15deg)
+   margin: -200px 0 0px 0
+   padding: 0
+
+//========================================================================================================
+
+.steps
+
+      &__background
+         width: 100%
+         position: absolute
+         top: -270px
+         z-index: 0
+         transform: skew(0deg,20deg)
+         img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+      &__container
+         margin-top: 300px
+         transform: skew(0deg,20deg)
+         position: relative
+         z-index: 3
+
+      &__content
+
+      &__title
+         padding: 0 20px 0 50%
+         color: #fff
+         font-family: ebgaramond
+         font-weight: 400
+         font-size: 40px
+         line-height: 60px
+         margin-bottom: 120px
+         span
+            text-transform: uppercase
+            color: #E1DECE
+            font-weight: 700
+
+      &__row
+         margin: 0 0 175px 0
+         display: flex
+         flex-wrap: wrap
+         justify-content: space-between
+
+      &__item
+         max-width: 310px
+         margin-bottom: 60px
+
+.steps
+   overflow: hidden
+   z-index: 2
+   position: relative
+   margin: -300px 0 0 0
+   transform: skew(0deg,-20deg)
+
+.itemt
+
+      &__image
+         img
+            width: 100%
+            height: 100%
+            object-fit: cover
+         width: 64px
+         height: 64px
+         margin: 0 0 30px -7px
+
+      &__title
+         font-weight: 700
+         font-size: 18px
+         line-height: 21px
+         color: #FFFFFF
+         margin-bottom: 19px
+
+      &__text
+         color: #C4C4C4
+         font-weight: 400
+         font-size: 14px
+         line-height: 24px
+
+//============================================================================================================================
+
+.partners
+
+      &__container
+
+      &__title
+         padding: 0 0 0 43%
+         margin-bottom: 100px
+         font-family: egaramond
+         font-weight: normal
+         font-size: 40px
+         line-height: 60px
+         color: #191919
+         span
+            font-weight: 700
+            text-transform: uppercase
+
+      &__row
+         display: flex
+         flex-wrap: wrap
+         justify-content: space-between
+         margin-bottom: 100px
+
+      &__item2
+         width: 350px
+         height: 57px
+         margin-bottom: 70px
+         img
+            width: 100%
+            height: 100%
+            object-fit: cover
+
+.partners
+   margin: -300px 0 0 0
+   padding: 500px 0 0 0 
+   background-color: #E1DECE

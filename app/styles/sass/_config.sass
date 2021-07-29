@@ -10,6 +10,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 @import 'node_modules/bootstrap/scss/bootstrap-reboot.scss' // Bootstrap Reboot collection
 @import 'node_modules/bootstrap/scss/mixins/_breakpoints.scss' // Bootstrap Breakpoints mixin
+@import 'node_modules/swiper/swiper.min' // optional, adding swiepr classes
 // @import 'node_modules/bootstrap/scss/bootstrap-grid.scss' // Optional Bootstrap Grid
 // @import 'node_modules/bootstrap/scss/utilities/_sizing.scss' // Optional Bootstrap Utilites
 
@@ -17,6 +18,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 
 @import 'mixins'
 
+@include font('roboto-oh5', normal, 300, '../fonts/Roboto-Light.woff2')
 @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
 @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
 @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
@@ -36,7 +38,7 @@ $md3: 767.98
 $md4: 479.98 
 
 ._container
-	padding: 0 15px
+	padding: 0 6px
 	margin: 0 auto
 	max-width: $maxWidthContainer + px
 	min-width: none
@@ -98,9 +100,9 @@ ul
 
 .page 
 	flex: 1 1 auto
-	padding: 67px 0px 30px 0px
+	padding: 67px 0px 0px 0px
 	display: flex
-	flex-direction: column
+	flex-direction: column	
 	background-color: rgba(25, 25, 25, 1)
 	width: 100%
 	// .page__side
