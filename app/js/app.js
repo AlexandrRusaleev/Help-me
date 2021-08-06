@@ -7,7 +7,6 @@ window.$ = $
 // import 'module_name'
 import 'smooth-scroll'
 import 'inputmask'
-import Swiper, { Navigation, Pagination } from 'swiper'
 import Swiper from 'swiper/bundle'
 import noUiSlider from 'nouislider'
 import wNumb from 'wnumb'
@@ -42,7 +41,7 @@ function sliders() {
 		observer: true,
 		observeParents: true,
 		slidesPerView: 1,
-		spaceBetween: 0,
+		spaceBetween: 20,
 		autoHeight: true,
 		speed: 800,
 		//touchRatio: 0,
@@ -91,7 +90,132 @@ function sliders() {
 			el: '.swiper-scrollbar',
 		},
 	});
+
+
+	let sliderSlider = new Swiper('.slider2', {
+		/*
+		effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		*/
+		observer: true,
+		observeParents: true,
+		slidesPerView: 2,
+		spaceBetween: 20,
+		autoHeight: true,
+		speed: 800,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		// Dots
+		// pagination: {
+		// 	el: '.slider-quality__pagging',
+		// 	clickable: true,
+		// },
+		// Arrows
+		// navigation: {
+		// 	prevEl: '.swiper-button-prev',
+		// 	nextEl: '.swiper-button-next',
+		// },
+		/*
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				autoHeight: true,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1268: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+		},
+		*/
+		on: {
+			lazyImageReady: function () {
+				ibg(); // подключить при использовании
+			},
+		},
+		// And if we need scrollbar
+		// scrollbar: {
+		// 	el: '.swiper-scrollbar',
+		// },
+	});
+
+	let sliderSlider = new Swiper('.slider3', {
+		/*
+		effect: 'fade',
+		autoplay: {
+			delay: 3000,
+			disableOnInteraction: false,
+		},
+		*/
+		observer: true,
+		observeParents: true,
+		slidesPerView: 'auto',
+		spaceBetween: 20,
+		autoHeight: true,
+		speed: 800,
+		//touchRatio: 0,
+		//simulateTouch: false,
+		//loop: true,
+		//preloadImages: false,
+		//lazy: true,
+		// Dots
+		// pagination: {
+		// 	el: '.slider-quality__pagging',
+		// 	clickable: true,
+		// },
+		// Arrows
+		// navigation: {
+		// 	prevEl: '.swiper-button-prev',
+		// 	nextEl: '.swiper-button-next',
+		// },
+		/*
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+				spaceBetween: 0,
+				autoHeight: true,
+			},
+			768: {
+				slidesPerView: 2,
+				spaceBetween: 20,
+			},
+			992: {
+				slidesPerView: 3,
+				spaceBetween: 20,
+			},
+			1268: {
+				slidesPerView: 4,
+				spaceBetween: 30,
+			},
+		},
+		*/
+		on: {
+			lazyImageReady: function () {
+				ibg(); // подключить при использовании
+			},
+		},
+		// And if we need scrollbar
+		// scrollbar: {
+		// 	el: '.swiper-scrollbar',
+		// },
+	});
+
 }
+
 
 function stickyHeader(src_value) {
 	const headerTriggerHeight = 30;
@@ -116,13 +240,13 @@ function map(n) {
 			// Чтобы не определять координаты центра карты вручную,
 			// воспользуйтесь инструментом Определение координат.
 			controls: [],
-			center: [43.585525, 39.723062],
+			center: [51.126381,71.434422],
 			// Уровень масштабирования. Допустимые значения:
 			// от 0 (весь мир) до 19.
-			zoom: 10
+			zoom: 16
 		});
 
-		let myPlacemark = new ymaps.Placemark([43.585525, 39.723062], {
+		let myPlacemark = new ymaps.Placemark([51.126709, 71.434840], {
 		},{
 			// Опции.
 			//balloonContentHeader: 'Mistoun',
@@ -136,7 +260,7 @@ function map(n) {
 			// Необходимо указать данный тип макета.
 			iconLayout: 'default#imageWithContent',
 			// Своё изображение иконки метки.
-			iconImageHref: 'images/dist/icons/map.svg',
+			//iconImageHref: 'images/dist/icons/map.svg',
 			// Размеры метки.
 			iconImageSize: [40, 40],
 			// Смещение левого верхнего угла иконки относительно
@@ -558,7 +682,7 @@ function files() {
 						//'+38(999) 999 9999'
 						//'+375(99)999-99-99'
 						input.classList.add('_mask');
-						Inputmask("+375 (99) 9999999", {
+						Inputmask("+7(999) 999 9999", {
 							//"placeholder": '',
 							clearIncomplete: true,
 							clearMaskOnLostFocus: true,

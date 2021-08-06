@@ -1,4 +1,4 @@
-.popup 
+.popup
 	-webkit-overflow-scrolling: touch
 	z-index: 100
 	padding: 30px 10px
@@ -9,9 +9,9 @@
 	height: 100%
 	transition: visibility 0.8s ease 0s
 	visibility: hidden
-	&::before 
+	&::before
 		content: ""
-		background-color: rgba(0, 0, 0, 0.9)
+		background-color: #e1dece70
 		position: fixed
 		width: 100%
 		height: 100%
@@ -19,30 +19,28 @@
 		left: 0
 		opacity: 0
 		transition: opacity 0.8s ease 0s
-	
-	&.show 
+
+	&.show
 		visibility: visible
 		overflow: auto
-		&::before 
+		&::before
 			opacity: 1
-		
-		.popup__body 
+
+		.popup__body
 			transform: scale(1)
-		
-	
-	&._active 
+
+	&._active
 		overflow: auto
 		visibility: visible
-		&::before 
+		&::before
 			opacity: 1
-		
-		.popup__body 
+
+		.popup__body
 			transition: all 0.3s ease 0.2s
 			transform: scale(1)
-		
-	
+
 	// .popup__content
-	&__content 
+	&__content
 		display: flex
 		flex-direction: column
 		align-items: center
@@ -52,23 +50,113 @@
 		display: flex
 		justify-content: center
 		align-items: center
-	
+
 	// .popup__body
-	&__body 
+	&__body
+		color: #191919
+		border-radius: 5px
+		border: 2px solid #191919
+		text-align: center
 		transform: scale(0)
 		transition: all 0.3s ease 0s
-		background-color: #666
-		padding: 50px
-		width: 100%
-		max-width: 800px
-	
+		background-color: #E1DECE
+		width: 440px
+		height: 308px
+
 	// .popup__close
-	&__close 
-		width: 15px
-		height: 15px
+	&__close
+		color: #E1DECE
+		font-size: 10px
+		font-weight: 400
+		display: flex
+		justify-content: center
+		align-items: center
+		width: 17px
+		height: 17px
+		border-radius: 50%
 		position: absolute
-		top: 0px
-		right: 0px
+		top: 10px
+		right: 13px
 		cursor: pointer
 		z-index: 30
-		background: url("../images/dist/icons/close.svg") 0 0 no-repeat
+		background: #191919
+
+	&__btn
+		font-weight: 400
+		font-size: 16px
+		display: block
+		transition: 0.3s
+		width: 309px
+		height: 65px
+		color: #FFFFFF
+		font-size: 15px
+		font-weight: 400
+		text-align: center
+		border-radius: 5px
+		background: #191919
+		margin: 13px auto 0
+		padding: 17px 0 23px
+		&:hover
+			background-color: rgba(25, 25, 25, 0.7)
+			color: #ffff
+			text-decoration: none
+		&:active
+			box-shadow: inset 0px 4px 4px rgba(0, 0, 0, 0.25)
+
+	&__phone
+		margin: 13px auto 0
+
+	&__title
+		margin-top: 32px
+		font-weight: 500
+		font-size: 20px
+
+	&__titlet
+		margin-top: 58px
+
+	&__subtitle
+		font-weight: 400
+		font-size: 16px
+		line-height: 22px
+		margin-top: 32px
+
+	&__txt
+		margin-top: 42px
+		font-family: segoe-script
+		font-weight: 400
+		font-size: 16px
+
+.form-popup
+	margin: 0 auto
+
+.flpopup
+	margin: 15px 0 0 0
+	font-weight: 400
+	max-width: 285px
+	font-family: $userfont
+	font-size: 16px
+	line-height: 22px
+
+.flipopup
+	margin: 0 0 13px 0
+
+//=====================================================================================================================
+.popup-v
+
+	&__body
+		width: 1020px
+		height: 579px
+		border: 2px solid #E1DECE
+
+	&__close
+		display: flex
+		justify-content: center
+		align-items: center
+		padding: 0 1px 3px 1px
+
+.popup__video
+	width: 100%
+	height: 100%
+	iframe
+		width: 100%
+		height: 100%

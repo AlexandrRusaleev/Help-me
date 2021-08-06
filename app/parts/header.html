@@ -12,14 +12,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> -->
-
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<link rel="icon" href="images/favicon.png">
 	<meta property="og:image" content="images/dist/preview.jpg">
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=1f58dd4b-663d-4d66-a9f4-545167e42793&lang=ru_RU"
 		type="text/javascript">
 	</script>
 	<link rel="stylesheet" href="css/main.min.css">
-
 </head>
 
 <body>
@@ -27,8 +26,8 @@
 	<header class="header">
 		<div class="header__content _container">
 			<div class="header__menu menu">
-				<h1 class="menu__title">DELUXE HOUSE<span> 
-					design studio</span></h1>
+				<a href="index.html" class="menu__title">DELUXE HOUSE<span> 
+					design studio</span></a>
 				<div class="menu__icon icon-menu">
 					<span></span>
 					<span></span>
@@ -36,11 +35,20 @@
 				</div>
 				<nav class="menu__body">
 					<ul class="menu__list">
-						<li><a href="#" class="menu__link _goto-block">Услуги</a></li>
-						<li><a href="#" class="menu__link _goto-block">Ремонт</a></li>
-						<li><a href="#" class="menu__link _goto-block">Портфолио</a></li>
-						<li><a href="#" class="menu__link _goto-block">О нас</a></li>
-						<li><a href="#" class="menu__link _goto-block">Статьи</a></li>
+						<li><a href="repair.html" class="menu__link _goto-block">Услуги</a></li>
+						<li>
+							<a href="#" class="menu__link _goto-block">Портфолио</a>
+							<ul class="sub-menu__list">
+								<li>
+									<a href="portfolio-resid.html" class="sub-menu__link">Жилые помещения</a>
+								</li>
+								<li>
+									<a href="portfolio-comm.html" class="sub-menu__link">Коммерческие помещения</a>
+								</li>
+							</ul>
+						</li>
+						<li><a href="about-us.html" class="menu__link _goto-block">О нас</a></li>
+						<li><a href="articles.html" class="menu__link _goto-block">Статьи</a></li>
 						<li><a href="#" class="menu__link _goto-block">Контакты</a></li>
 					</ul>
 				</nav>

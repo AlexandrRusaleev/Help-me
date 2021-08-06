@@ -1,18 +1,36 @@
 <div class="popup popup_callback">
-	<div class="popup__content">
+	<div class="popup__content"> 
 		<div class="popup__body">
-			<div class="popup__close"></div>
-			Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rem officiis earum laudantium, adipisci reiciendis
-			porro magni unde nostrum fuga inventore ipsum sunt minus dolorem repellendus illum aliquam blanditiis
-			similique quaerat!
+			<div class="popup__close">x</div>
+			<div class="popup__title">Перезвоните мне</div>
+			<form action="#" class="form form-popup _scr-item">
+				<div class="form__line flipopup">
+					<label for="inp" class="form__label flpopup">Наш менеджер перезвонит вам в течении 10 минут</label>
+					<input id="inp" autocomplete="off" type="phone" name="form[]" data-error="Ошибка"
+						data-value="+ 7 (___) ___ - __ - __" class="input popup__phone">
+				</div>
+			</form>
+			<a href="#thanks" class="popup__btn _popup-link">Отправить запрос</a>
 		</div>
 	</div>
 </div>
 
-<div class="popup popup_video">
-	<div class="popup__content">
+<div class="popup popup_thanks">
+	<div class="popup__content"> 
 		<div class="popup__body">
-			<div class="popup__close popup__close_video"></div>
+			<div class="popup__close">x</div>
+			<div class="popup__title popup__titlet">Спасибо что оставили заявку!</div>
+			<div class="popup__subtitle">А пока вы ждете звонок, можете просмотреть наши лучшие проекты!</div>
+			<div class="popup__txt">Мы создаем прекрасное!</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="popup popup-v popup_video">
+	<div class="popup__content popup-v__content"> 
+		<div class="popup__body popup-v__body">
+			<div class="popup__close popup-v__close popup__close_video">x</div>
 			<div class="popup__video _video"></div>
 		</div>
 	</div>

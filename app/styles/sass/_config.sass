@@ -21,6 +21,7 @@ $systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif // System Font
 @include font('roboto-oh5', normal, 300, '../fonts/Roboto-Light.woff2')
 @include font('roboto-oh5', normal, 400, '../fonts/roboto-regular-webfont.woff2')
 @include font('roboto-oh5', italic, 400, '../fonts/roboto-italic-webfont.woff2')
+@include font('roboto-oh5', normal, 500, '../fonts/Roboto-Medium.woff2')
 @include font('roboto-oh5', normal, 700, '../fonts/roboto-bold-webfont.woff2')
 @include font('roboto-oh5', italic, 700, '../fonts/roboto-bolditalic-webfont.woff2')
 @include font('roboto-oh5', normal, 900, '../fonts/Roboto-Black.woff2')
@@ -34,13 +35,13 @@ $maxWidth: 1440
 $maxWidthContainer: 1170
 $md1: $maxWidthContainer + 12
 $md2: 991.98
-$md3: 767.98
+$md3: 768
 $md4: 479.98 
 
 ._container
 	padding: 0 6px
 	margin: 0 auto
-	max-width: $maxWidthContainer + px
+	max-width: $maxWidthContainer+px
 	min-width: none
 	width: 100%
 
@@ -105,6 +106,9 @@ ul
 	flex-direction: column	
 	background-color: rgba(25, 25, 25, 1)
 	width: 100%
+	@media (max-width: $md4+px)
+		padding: 55px 0 0 0
+		
 	// .page__side
 	&__side 
 		flex: 0 0 300px

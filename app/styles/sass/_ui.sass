@@ -4,14 +4,18 @@
 	position: absolute
 	display: inline-block
 	text-align: left
-	font-size: 90px
+	@include adaptiveFont(90, 50)
 	font-weight: 900
-	line-height: 100px
+	line-height: 100/90*100%
 	color: 
 	span
 		background: linear-gradient(20deg, rgba(151, 142, 112, 0.267), rgba(222, 211, 109, 0))
 		-webkit-background-clip: text
 		-webkit-text-fill-color: transparent
+
+.dn
+	@media (max-width: $md4+px)
+		display: none		
 
 //</ОСНОВНОЙ БЛОК>====================================================================================================
 
@@ -44,7 +48,9 @@
 	&__block 
 	
 .spollers-block 
-	margin: 0px 0px 50px 0px
+	border-top: 1px solid #E1DECE
+	margin-bottom: 50px
+	padding-top: 20px
 	// .spollers-block__item
 	&__item 
 		margin: 0px 0px 20px 0px
@@ -54,14 +60,19 @@
 	
 	// .spollers-block__title
 	&__title 
-		background-color: #794f45
+		margin-bottom: 30px
 		cursor: pointer
-		padding: 20px 70px 20px 20px
+		padding: 0px 0px 0px 0px
 		position: relative
+		font-family: egaramond
+		font-weight: 700
+		font-size: 24px
+		line-height: 27px
+		transition-duration: 0.3s
 		&::before 
 			content: ""
 			width: 20px
-			background-color: #fff
+			background-color: #E1DECE
 			height: 2px
 			transition: transform 0.3s ease 0s
 			transform: translate(0, -50%) rotate(-45deg)
@@ -70,9 +81,10 @@
 			top: 50%
 		
 		&::after 
+			color: #fff
 			content: ""
 			width: 20px
-			background-color: #fff
+			background-color: #E1DECE
 			height: 2px
 			transition: transform 0.3s ease 0s
 			transform: translate(0, -50%) rotate(45deg)
@@ -81,16 +93,23 @@
 			top: 50%
 		
 		&._active 
+			color: #fff
 			&::before 
+				background-color: #ffff
 				transform: translate(0, -50%) rotate(45deg)
 			
 			&::after 
+				background-color: #ffff
 				transform: translate(0, -50%) rotate(-45deg)
 			
 	// .spollers-block__body
 	&__body 
+		color: #ffff
+		font-weight: 400
+		font-size: 16px
+		line-height: 26px
 		display: none
-		padding: 20px 0px 0px 0px
+		padding: 0px 0px 0px 0px
 	
 .form 
 	margin: 0px 0px 50px 0px
@@ -129,16 +148,23 @@
 			margin: 0px 10px 0px 0px
 
 .gallery-block 
+	border-top: 1px solid #E1DECE
+	padding-top: 34px
 	display: flex
+	justify-content: space-between
 	flex-wrap: wrap
-	margin: 0px -10px
+	margin: 0px
 	// .gallery-block__item
 	&__item 
-		flex: 0 1 33.333%
-		margin: 0px 0px 20px 0px
-		padding: 0px 10px
+		width: 570px
+		height: 384px
+		margin: 0px 0px 38px 0px
 		img 
-			max-width: 100%
+			border-radius: 5px
+			width: 100%
+			height: 100%
+			object-fit: cover
+
 
 //<ГОТОВЫЕ КЛАССЫ>====================================================================================================
 .row:after 
